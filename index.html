@@ -2,14 +2,14 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CETI – Turma B de Desenvolvimento de Sistemas</title>
 <style>
   :root{
     --bg:#050505;
     --panel:#0e0e0e;
-    --accent:#00a651;      
-    --accent-2:#fdd835;    
+    --accent:#00a651;
+    --accent-2:#fdd835;
     --border-soft:rgba(255,255,255,0.08);
     --text-main:#f5f5f5;
     --text-muted:#cfcfcf;
@@ -22,11 +22,7 @@
     color:var(--text-main);
     min-height:100vh;
   }
-  .page{
-    max-width:1100px;
-    margin:0 auto;
-    padding:24px 16px 40px;
-  }
+  .page{ max-width:1100px; margin:0 auto; padding:24px 16px 40px; }
   header{
     border-radius:18px;
     padding:18px 18px 16px;
@@ -49,72 +45,23 @@
   }
   .header-content{ position:relative; z-index:2; }
   header h1{ margin:0; color:var(--accent-2); font-size:22px; text-transform:uppercase; letter-spacing:0.7px; font-weight:800; }
-  header h2{ margin:6px 0 2px 0; color:#fff; font-size:18px; font-weight:600; }
+  header h2{ margin:6px 0 2px 0; color:#ffffff; font-size:18px; font-weight:600; }
   header h3{ margin:0 0 6px 0; color:var(--accent); font-size:15px; font-weight:600; }
   header p{ margin:0; font-size:13px; color:var(--text-muted); }
-  .section{
-    margin-bottom:18px;
-    border-radius:16px;
-    background:linear-gradient(180deg,#060606,#101010);
-    border:1px solid var(--border-soft);
-    box-shadow:0 10px 30px rgba(0,0,0,0.8);
-    padding:16px 16px 14px;
-  }
+  .section{ margin-bottom:18px; border-radius:16px; background:linear-gradient(180deg,#060606,#101010); border:1px solid var(--border-soft); box-shadow:0 10px 30px rgba(0,0,0,0.8); padding:16px 16px 14px; }
   .section h2{ margin:0 0 8px; font-size:18px; color:var(--accent-2); }
   .section p{ margin:0 0 8px; font-size:14px; color:var(--text-main); }
   .section ul{ margin:6px 0 4px 18px; font-size:14px; color:var(--text-muted); }
-  .pill{
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-    background:rgba(0,166,81,0.15);
-    border-radius:999px;
-    padding:3px 11px;
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:0.5px;
-    color:var(--accent);
-    border:1px solid rgba(0,166,81,0.5);
-    margin-bottom:6px;
-  }
-  .dot{
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:var(--accent-2);
-    box-shadow:0 0 10px rgba(253,216,53,0.9);
-  }
-  .grid-main{
-    display:grid;
-    grid-template-columns:1.1fr 0.9fr;
-    gap:18px;
-    align-items:stretch;
-  }
+  .pill{ display:inline-flex; align-items:center; gap:6px; background:rgba(0,166,81,0.15); border-radius:999px; padding:3px 11px; font-size:11px; text-transform:uppercase; letter-spacing:0.5px; color:var(--accent); border:1px solid rgba(0,166,81,0.5); margin-bottom:6px; }
+  .dot{ width:8px; height:8px; border-radius:50%; background:var(--accent-2); box-shadow:0 0 10px rgba(253,216,53,0.9); }
+  .grid-main{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:18px; align-items:stretch; }
   @media(max-width:900px){ .grid-main{ grid-template-columns:1fr; } }
-  .photo-box{
-    border-radius:16px;
-    background:radial-gradient(circle at top,#1b1b1b,#050505);
-    border:1px solid var(--border-soft);
-    padding:10px;
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-    justify-content:space-between;
-  }
-  .projects-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
-    gap:12px;
-    margin-top:8px;
-  }
-  .project-card{
-    background:linear-gradient(180deg,#050505,#0b0b0b);
-    border-radius:12px;
-    border:1px solid rgba(255,255,255,0.06);
-    padding:10px 10px 8px;
-    font-size:13px;
-  }
-  .project-card h3{ margin:0 0 4px; font-size:14px; color:#fff; }
+  .photo-box{ border-radius:16px; background:radial-gradient(circle at top,#1b1b1b,#050505); border:1px solid var(--border-soft); padding:10px; display:flex; flex-direction:column; gap:8px; justify-content:space-between; }
+  .photo-box img{ border-radius:14px; width:100%; display:block; }
+  .tagline{ font-size:13px; color:var(--text-muted); margin-top:2px; }
+  .projects-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:12px; margin-top:8px; }
+  .project-card{ background:linear-gradient(180deg,#050505,#0b0b0b); border-radius:12px; border:1px solid rgba(255,255,255,0.06); padding:10px 10px 8px; font-size:13px; }
+  .project-card h3{ margin:0 0 4px; font-size:14px; color:#ffffff; }
   .project-card p{ margin:0; font-size:13px; color:var(--text-muted); }
   .students-list{ display:flex; flex-wrap:wrap; gap:6px; margin-top:4px; }
   .student-pill{ border-radius:999px; padding:4px 9px; font-size:12px; background:#050505; border:1px solid rgba(255,255,255,0.08); color:var(--text-muted); }
@@ -155,7 +102,7 @@
       </div>
 
       <div class="photo-box">
-        <img src="photo01.jpg" alt="Foto da Turma B" style="width:100%; border-radius:14px;">
+        <img src="imagens/photo01.jpg" alt="Foto da Turma B">
         <p class="tagline">
           Sugestão: foto da turma no laboratório de informática, durante os projetos de programação.
         </p>
@@ -174,19 +121,31 @@
     <div class="projects-grid">
       <div class="project-card">
         <h3>Estande 1 – Programação na Prática</h3>
-        <p>Demonstração de códigos simples em Python, mostrando variáveis, decisões, repetições e exemplos de problemas do dia a dia sendo resolvidos com lógica.</p>
+        <p>
+          Demonstração de códigos simples em Python, mostrando variáveis, decisões, repetições e exemplos
+          de problemas do dia a dia sendo resolvidos com lógica.
+        </p>
       </div>
       <div class="project-card">
         <h3>Estande 2 – Criação de Sites</h3>
-        <p>Páginas criadas com HTML, CSS e um toque de JavaScript, explicando como layouts, cores e textos se transformam em um site completo.</p>
+        <p>
+          Páginas criadas com HTML, CSS e um toque de JavaScript, explicando como layouts, cores e textos
+          se transformam em um site completo.
+        </p>
       </div>
       <div class="project-card">
         <h3>Estande 3 – Jogos de Lógica 1 e 2</h3>
-        <p>Jogos digitais como <strong>Mastermind</strong> e <strong>adivinhação de números</strong>, usados para treinar raciocínio lógico, dedução e pensamento algorítmico.</p>
+        <p>
+          Jogos digitais como <strong>Mastermind</strong> e <strong>adivinhação de números</strong>, usados para
+          treinar raciocínio lógico, dedução e pensamento algorítmico.
+        </p>
       </div>
       <div class="project-card">
         <h3>Estande 4 – Pensamento Lógico</h3>
-        <p>Desafios com Sudoku, enigmas e atividades de lógica, mostrando como a mesma forma de pensar é usada tanto em jogos quanto na programação.</p>
+        <p>
+          Desafios com Sudoku, enigmas e atividades de lógica, mostrando como a mesma forma de pensar é usada
+          tanto em jogos quanto na programação.
+        </p>
       </div>
     </div>
   </div>
@@ -195,7 +154,10 @@
   <div class="section">
     <div class="pill"><span class="dot"></span> Quem faz a Turma B acontecer</div>
     <h2>Estudantes da Turma B</h2>
-    <p>Estes são os estudantes que contribuíram para os projetos e para a montagem dos estandes do Dia “D” da Educação Profissional e Tecnológica.</p>
+    <p>
+      Estes são os estudantes que contribuíram para os projetos e para a montagem dos estandes
+      do Dia “D” da Educação Profissional e Tecnológica.
+    </p>
     <div class="students-list">
       <div class="student-pill">ADRIEL LIMA DE SOUSA</div>
       <div class="student-pill">ANA BEATRIZ RIBEIRO DE JESUS</div>
@@ -252,9 +214,9 @@
     </p>
     <ul>
       <li>À direção e coordenação do <strong>CETI - Professora Maria de Castro Ribeiro</strong>, pelo apoio e confiança.</li>
-      <li>Aos professores e funcionários, que acompanharam cada etapa, tiraram dúvidas e incentivaram.</li>
-      <li>Às famílias, que estiveram presentes, apoiando os estudos.</li>
-      <li>Aos colegas de outras turmas e aos visitantes do Dia “D”, por valorizarem nosso esforço.</li>
+      <li>Aos professores e funcionários, que acompanharam cada etapa, tiraram dúvidas, incentivaram e acreditaram no potencial da turma.</li>
+      <li>Às famílias, que estiveram presentes, apoiando os estudos, mesmo nos dias mais cansativos.</li>
+      <li>Aos colegas de outras turmas e aos visitantes do Dia “D”, por dedicarem um tempo para conhecer os projetos.</li>
     </ul>
     <p>
       Que este seja apenas o início de muitos outros projetos, linhas de código, ideias e sonhos que ainda vamos transformar em realidade.
@@ -281,7 +243,6 @@
       <strong>CETI - Professora Maria de Castro Ribeiro</strong> – Curso de Desenvolvimento de Sistemas – Turma B
     </p>
   </footer>
-
 </div>
 </body>
 </html>
