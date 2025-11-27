@@ -2,14 +2,14 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CETI – Turma B de Desenvolvimento de Sistemas</title>
 <style>
   :root{
     --bg:#050505;
     --panel:#0e0e0e;
-    --accent:#00a651;
-    --accent-2:#fdd835;
+    --accent:#00a651;      
+    --accent-2:#fdd835;    
     --border-soft:rgba(255,255,255,0.08);
     --text-main:#f5f5f5;
     --text-muted:#cfcfcf;
@@ -49,22 +49,39 @@
   }
   .header-content{position:relative; z-index:2;}
   header h1{margin:0; color:var(--accent-2); font-size:22px; text-transform:uppercase; letter-spacing:0.7px; font-weight:800;}
-  header h2{margin:6px 0 2px 0; color:#ffffff; font-size:18px; font-weight:600;}
+  header h2{margin:6px 0 2px 0; color:#fff; font-size:18px; font-weight:600;}
   header h3{margin:0 0 6px 0; color:var(--accent); font-size:15px; font-weight:600;}
   header p{margin:0; font-size:13px; color:var(--text-muted);}
   .section{margin-bottom:18px; border-radius:16px; background:linear-gradient(180deg,#060606,#101010); border:1px solid var(--border-soft); box-shadow:0 10px 30px rgba(0,0,0,0.8); padding:16px 16px 14px;}
   .section h2{margin:0 0 8px; font-size:18px; color:var(--accent-2);}
   .section p{margin:0 0 8px; font-size:14px; color:var(--text-main);}
+  .section ul{margin:6px 0 4px 18px; font-size:14px; color:var(--text-muted);}
   .pill{display:inline-flex; align-items:center; gap:6px; background:rgba(0,166,81,0.15); border-radius:999px; padding:3px 11px; font-size:11px; text-transform:uppercase; letter-spacing:0.5px; color:var(--accent); border:1px solid rgba(0,166,81,0.5); margin-bottom:6px;}
   .dot{width:8px; height:8px; border-radius:50%; background:var(--accent-2); box-shadow:0 0 10px rgba(253,216,53,0.9);}
   .grid-main{display:grid; grid-template-columns:1.1fr 0.9fr; gap:18px; align-items:stretch;}
   @media(max-width:900px){.grid-main{ grid-template-columns:1fr; }}
-  .photo-box{border-radius:16px; background:radial-gradient(circle at top,#1b1b1b,#050505); border:1px solid var(--border-soft); padding:10px; display:flex; flex-direction:column; gap:8px; justify-content:space-between;}
-  .photo-placeholder img{border-radius:14px; width:100%; height:auto;}
+
+  .photo-box{
+    border-radius:16px;
+    background:radial-gradient(circle at top,#1b1b1b,#050505);
+    border:1px solid var(--border-soft);
+    padding:10px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    justify-content:space-between;
+  }
+  .photo-box img{
+    border-radius:14px;
+    width:100%;
+    height:auto;
+    border:1px solid rgba(253,216,53,0.7);
+    display:block;
+  }
   .tagline{font-size:13px; color:var(--text-muted); margin-top:2px;}
   .projects-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:12px; margin-top:8px;}
   .project-card{background:linear-gradient(180deg,#050505,#0b0b0b); border-radius:12px; border:1px solid rgba(255,255,255,0.06); padding:10px 10px 8px; font-size:13px;}
-  .project-card h3{margin:0 0 4px; font-size:14px; color:#ffffff;}
+  .project-card h3{margin:0 0 4px; font-size:14px; color:#fff;}
   .project-card p{margin:0; font-size:13px; color:var(--text-muted);}
   .students-list{display:flex; flex-wrap:wrap; gap:6px; margin-top:4px;}
   .student-pill{border-radius:999px; padding:4px 9px; font-size:12px; background:#050505; border:1px solid rgba(255,255,255,0.08); color:var(--text-muted);}
@@ -105,11 +122,10 @@
       </div>
 
       <div class="photo-box">
-        <div class="photo-placeholder">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj40omjYF3FLvxphs875fi4w0s4kpJ8zjv7Q&s" alt="Foto da Turma B">
-        </div>
+        <!-- FOTO DA TURMA COM O NOVO LINK -->
+        <img src="https://raw.githubusercontent.com/RicardoRibeiro-Prof/turmab/refs/heads/main/imagens/photo01.jpg" alt="Foto da Turma B">
         <p class="tagline">
-          Sugestão: foto da turma no laboratório de informática, durante os projetos de programação.
+          Foto da Turma B durante os projetos de programação.
         </p>
       </div>
     </div>
@@ -167,7 +183,37 @@
       <div class="student-pill">ADRIEL LIMA DE SOUSA</div>
       <div class="student-pill">ANA BEATRIZ RIBEIRO DE JESUS</div>
       <div class="student-pill">ANA KARLA DA SILVA</div>
-      <!-- ... outros alunos ... -->
+      <div class="student-pill">ANA KELLY DA COSTA SILVA</div>
+      <div class="student-pill">ANTONIO MANOEL GUERRA MARQUES</div>
+      <div class="student-pill">CARLOS MIGUEL RIBEIRO SILVA</div>
+      <div class="student-pill">DEVID SOUSA SILVA</div>
+      <div class="student-pill">DIOGO PAES LANDIM DOS SANTOS</div>
+      <div class="student-pill">DUAN PHELIPE DE SOUSA NEGREIROS</div>
+      <div class="student-pill">EZEQUIEL MARQUES ARAGAO</div>
+      <div class="student-pill">GUSTAVO DE SOUSA OLIVEIRA</div>
+      <div class="student-pill">IVANIEL ASSIS OLIVEIRA</div>
+      <div class="student-pill">JHENNIFER KAILLA SANTOS BRITO</div>
+      <div class="student-pill">JOAO GUSTAVO DOS SANTOS SILVA MESQUITA</div>
+      <div class="student-pill">JOHNNY DE OLIVEIRA SANTOS</div>
+      <div class="student-pill">KAUANDERSON DA SILVA DUARTE</div>
+      <div class="student-pill">KINBERLLY VITORIA DEUSDARÁ PAES RIBEIRO</div>
+      <div class="student-pill">LOURDES MARIA DA SILVA OLIVEIRA</div>
+      <div class="student-pill">MAILTON GOMES DA COSTA NUNES</div>
+      <div class="student-pill">MARIA CLARA MIRANDA DE OLIVEIRA</div>
+      <div class="student-pill">MARKOS KRYSTIAN MARQUES DE OLIVEIRA</div>
+      <div class="student-pill">MATEUS HENRIQUE ROLDÃO DA SILVA SOUSA</div>
+      <div class="student-pill">PAULO VITOR ALVES SOARES</div>
+      <div class="student-pill">PEDRO DOS SANTOS PEREIRA</div>
+      <div class="student-pill">PEDRO MIGUEL RODRIGUES DA SILVA</div>
+      <div class="student-pill">RAFAEL DA SILVA PAES LANDIM</div>
+      <div class="student-pill">RAYLON MIGUEL NEGREIROS PEREIRA</div>
+      <div class="student-pill">RENAN GABRIEL MACÊDO DE SOUSA</div>
+      <div class="student-pill">ROBSON GOMES DE SOUSA</div>
+      <div class="student-pill">SAMUEL FERREIRA DA COSTA</div>
+      <div class="student-pill">SAMUEL RAMOS DA SILVA LACERDA</div>
+      <div class="student-pill">TIAGO DE JESUS PAES LANDIM</div>
+      <div class="student-pill">VITOR MANOEL SANTOS COSTA</div>
+      <div class="student-pill">YASMIN PAES LANDIM SANTOS</div>
     </div>
   </div>
 
@@ -183,6 +229,45 @@
     <p>
       A programação nos ensinou que um erro não é o fim, mas um ponto de partida para aprender algo novo.
       Da mesma forma, a vida escolar é feita de tentativas, ajustes e crescimento — ninguém chega longe sozinho.
+    </p>
+    <p>
+      A Turma B agradece:
+    </p>
+    <ul>
+      <li>
+        À direção e coordenação do <strong>CETI - Professora Maria de Castro Ribeiro</strong>, pelo apoio
+        e pela confiança na proposta da Educação Profissional e Tecnológica.
+      </li>
+      <li>
+        Aos professores e funcionários, que acompanharam cada etapa, tiraram dúvidas, incentivaram
+        e acreditaram no potencial da turma.
+      </li>
+      <li>
+        Às famílias, que estiveram presentes, apoiando os estudos, mesmo nos dias mais cansativos.
+      </li>
+      <li>
+        Aos colegas de outras turmas e aos visitantes do Dia “D”, por dedicarem um tempo para conhecer
+        o que construímos e por valorizarem o nosso esforço.
+      </li>
+    </ul>
+    <p>
+      Que este seja apenas o início de muitos outros projetos, linhas de código, ideias e sonhos que
+      ainda vamos transformar em realidade.
+    </p>
+  </div>
+
+  <!-- MENSAGEM FINAL -->
+  <div class="section">
+    <div class="pill"><span class="dot"></span> Mensagem para os visitantes</div>
+    <h2>Por que tudo isso importa?</h2>
+    <p>
+      Cada código escrito, cada erro corrigido e cada teste feito pela Turma B representa
+      um passo na formação profissional dos estudantes. Hoje são exercícios, jogos e sites
+      simples. Amanhã, podem ser sistemas que resolvem problemas reais na comunidade.
+    </p>
+    <p>
+      Obrigado por visitar nossos projetos. Esperamos que, ao sair deste espaço, você
+      veja a programação como uma oportunidade, não como um desafio impossível.
     </p>
   </div>
 
